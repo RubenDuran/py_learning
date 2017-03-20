@@ -23,11 +23,13 @@ for sport in sport_url:
         word=re.sub('[!@#$: ]', '', word)
         words.append(word)
 
-new_ipsum = 0
-ipsum_string = " "
-while new_ipsum < 50:
-    new_word = random.choice(words)
-    ipsum_string = ipsum_string + " " + new_word
-    new_ipsum = new_ipsum+1
-
-print "Sport ipsum " + ipsum_string.lower()
+# new_ipsum = 0
+# ipsum_string = " "
+# while new_ipsum < 50:
+#     new_word = random.choice(words)
+#     ipsum_string = ipsum_string + " " + new_word
+#     new_ipsum = new_ipsum+1
+#
+# print "Sport ipsum " + ipsum_string.lower()
+word_set = set(words)
+print word_set
