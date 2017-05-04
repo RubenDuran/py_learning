@@ -17,9 +17,11 @@ def populate(N=5):
         fake_email = fakegen.email()
 
         #new entry
-        user = User.objects.get_or_create(first_name = fake_first_name, last_name = fake_last_name, email = fake_email)[0]
+        user = User.objects.get_or_create(first_name = fake_first_name,
+                                          last_name = fake_last_name,
+                                          email = fake_email)[0]
 
-        if __name__ == '__main__':
-            print('POPULATING DATABASES')
-            populate(20)
-            print('complete')
+if __name__ == '__main__':
+    print('POPULATING DATABASES')
+    populate(25)
+    print('complete')
